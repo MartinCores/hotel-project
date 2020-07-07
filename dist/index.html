@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hotel</title>
+  <script src="/style.e308ff8e.js"></script></head>
+
+  <body class="bg-dark">
+    <!--Corpo da páxina-->
+    <nav class="navbar navbar-light bg-light shadow m-0">
+      <div class="col d-flex justify-content-flex-start">
+        <span class="navbar-brand mb-0 h1">Hotel Galifornia</span>
+      </div>
+      <div class="col d-flex justify-content-between mr-5">
+        <button id="hideCheckIn" class="btn btn-primary">Check In</button>
+        <button id="hideCheckOut" class="btn btn-warning">Check Out</button>
+        <button id="hideList" class="btn btn-danger">Listaxe</button>
+      </div>
+    </nav>
+    <div class="container bg-light">
+      <div id="checkInDNone" class="d-none">
+        <form id="form-whole" class="p-5">
+          <div class="form-group">
+            <label for="identifier">DNI del Reservante</label>
+            <input required="" type="text" class="form-control" id="identifier" placeholder="DNI">
+            <label for="name">Nombre completo:</label>
+            <input type="text" class="form-control" id="name" placeholder="Escriba aquí su nombre...">
+            <label for="email">Dirección de Correo</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label for="adults">Nº Adultas</label>
+            <select class="form-control" id="adults">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="kids">Nº Niñas</label>
+            <select class="form-control" id="kids">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nights">Número de noches</label>
+            <input id="nights" class="form-control" type="number">
+          </div>
+          <div class="form-group">
+            <label for="textarea1">Alérxenos/Advertencias a ter en conta polo noso equipo:</label>
+            <textarea class="form-control" id="textarea1" rows="3"></textarea>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary" id="submitbutton">
+              Submit
+            </button>
+          </div>
+          <div id="msglog"></div>
+        </form>
+      </div>
+      <div id="checkOutDNone" class="d-none">
+        <form id="form-checkout" class="p-5" action="get">
+          <label for="inputdni">Introducir DNI do cliente:</label>
+          <input type="text" class="form-control" id="inputdni" placeholder="DNI/NIF">
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mt-2 ml-auto" id="submitbuttonout">
+              Submit
+            </button>
+          </div>
+          <div id="msgcheckout"></div>
+        </form>
+      </div>
+      <div id="tablenone" class="d-none">
+        <table id="hidetable" class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Cuarto</th>
+              <th scope="col">Total ocupantes</th>
+              <th scope="col">DNI Reserva</th>
+            </tr>
+          </thead>
+          <tbody id="tablebody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!--Corpo da páxina END-->
+    <script src="/script.75da7f30.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
